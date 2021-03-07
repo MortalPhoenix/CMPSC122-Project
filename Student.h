@@ -1,25 +1,48 @@
+#pragma once
+#include <string>
 #include <iostream>
-#include <String>
-#include <cstdlib>
-#include <ctime>
-#include "mailingAddress.h"
-#include "semester.h"
-// #include "phoneNumber.h"
-// #include "email.h"
 
 using namespace std;
 
 class Student
 {
-    private:
-    //Constructor
-    Student();
-    Student(string fName, string mName, string lName, int ID);
 
-    public:
-    mailingAddress address1;
-    semester s1;
-    string fName, mName, lName, major, minor, status;
-    int ID;
-    // time_t bDay, acceptanceData;
+	private: 
+		string name;
+		string major;
+		string minor;
+		string student_UserName;
+		string status;
+		int stu_ID;
+
+public:
+
+	//constructors
+	Student();
+	Student(string name, string major, string minor, string student_UserName, string
+		status, int ID);
+
+	//setters
+	void set_name(string name1);
+	void set_major(string major1);
+	void set_minor(string minor1);
+	void set_studentUName(string uName1);
+	void set_status(string status2);
+	void set_stu_ID(int ID1);
+
+	//getters
+	string get_name();
+	string get_major();
+	string get_minor();
+	string get_studentUName();
+	string get_status();
+	int get_stu_ID();
+
+	
+	//display 
+
+	void displayStudent();
+
+
 };
+

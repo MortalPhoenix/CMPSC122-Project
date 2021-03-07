@@ -1,30 +1,45 @@
-#include <iostream>
-#include <String>
+#pragma once
 
+
+#include <string>
 using namespace std;
 
 class mailingAddress
 {
-    public:
+private:
+    string city_mA, state_mA, type_mA, streetAddress;
+    int zip;
+    int mA_Id;
+   
+
+public:
+
+    //constructor 
     mailingAddress();
-    mailingAddress(string city, string state, int zip, string type);
+    mailingAddress(string StreetAddress, string city, 
+        string state, int zip, string type, int id);
 
-    void newCity(string newCity);
-    void newState(string newState);
-    void newType(string newType);
-    void newZip(int newZip);
 
-    string getCity();
-    string getState();
-    string getType();
-    int getZip();
 
-    void setCity(string setCity);
-    void setState(string setState);
-    void setType(string setType);
-    void setZip(int setZip);
+    // getters
+    string get_City();
+    string get_State();
+    string get_Type();
+    string get_StreetAdress();
+    int get_Zip();
+    int get_mA_ID();
 
-    private:
-    string City, State, Type;
-    int Zip;
+    //setters
+    void set_City(string setCity);
+    void set_State(string setState);
+    void set_Type(string setType);
+    void set_Zip(int setZip);
+    void set_mA_ID(int setZip);
+    void set_StreetAdress(string StreetAdd);
+
+
+    //Display
+    void displayAdress();
+
 };
+
